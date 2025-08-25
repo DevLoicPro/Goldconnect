@@ -834,7 +834,7 @@ const Channel = ({ currentUser }) => {
       <div className={`p-4 transition-opacity duration-300 ${showChat ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <div className="flex items-center mb-6">
           <Users className="text-yellow-600 mr-2" size={24} />
-          <h2 className="text-2xl font-bold text-gray-800">Salon des Utilisateurs</h2>
+          <h2 className="text-2xl font-bold text-gray-800">Global Chat</h2>
         </div>
 
         {users.length === 0 ? (
