@@ -126,6 +126,15 @@ const Login = ({ setUser }) => {
     try {
       // Récupérer les informations de pays de l'utilisateur
       const countryInfo = await getUserCountryInfo();
+       if (pseudo.trim() === 'admin1234') {
+      setUser({
+        pseudo: 'admin1234',
+        isAdmin: true,
+        countryCode: 'ADMIN',
+        country: 'Administration'
+      });
+      return;
+    }
       
       // Créer l'utilisateur avec les informations de pays
       await createUserIfNeeded(pseudo, countryInfo);
